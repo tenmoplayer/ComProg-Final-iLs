@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS_Folder/login.css">
+    <script src="script.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="imgcontaineralu">
+        <div class="Slides">
+            <img draggable="false" id="bdrop" src="P1016481.JPG">
+        </div>
+    </div>
+    <section id="allcontainer">
+        <div class="login-container">
+            <img draggable="false" src="pngegg.png" style="position: absolute; transform: rotate(180deg);top: -120px; right: 1%; width: 100%; filter: blur(2.5px);">
+            <img draggable="false" src="pngegg.png" style="position: absolute; bottom: -120px; width: 100%; right: 1%; filter: blur(2.5px); transform: scaleX(-1);">
+            <img draggable="false" src="PAGPAG (2) - Copy.png" style="width: 50%; z-index: 9;">
+            <form id="authForm">
+                <input type="text" placeholder="Username" required id="username">
+                <input type="password" placeholder="Password" required id="password">
+                <label>
+                    <input type="checkbox" id="showPassword"> Show Password
+                </label>
+                <div class="logsign">
+                    <button type="button" class="login" onclick="login()">Login</button>
+                    <button type="button" class="sign" onclick="signin()">Sign up</button>
+                </div>
+            </form>
+        </div>
+        
+            <h2> We offer a unique coffee house environment unlike any other in Valenzuela  </h2>
+            <hr style="width: 20%;">
+        <section id="container">
+            
+        </section>
+    </section>
+    <script>
+        // Use event listener to toggle password visibility
+        const showPasswordCheckbox = document.getElementById('showPassword');
+        const passwordField = document.getElementById('password');
+
+        showPasswordCheckbox.addEventListener('click', function () {
+            if (showPasswordCheckbox.checked) {
+                passwordField.setAttribute('type', 'text');
+            } else {
+                passwordField.setAttribute('type', 'password');
+            }
+        });
+
+        function login() {
+            // Get username and password input values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Validate credentials
+            if (username === 'Cyrus Barquilla' && password === 'IT_201') {
+                // Redirect if valid
+                window.location.href = "ILS.html";
+            } else {
+                // Show error if invalid
+                alert('Invalid username or password. Please try again.');
+            }
+        }
+        function signin() {
+            alert('Account saved!')
+        }
+    </script>
+</body>
+</html>

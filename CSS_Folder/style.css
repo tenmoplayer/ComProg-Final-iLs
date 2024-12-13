@@ -1,0 +1,434 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    line-height: 1.6;
+    background-image: linear-gradient(to right, #7f4525, #a77c4e);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    z-index: 10;
+}
+
+/* Navigation */
+header {
+    background: transparent;
+    padding: 5px 0;
+    position: fixed, relative;
+    padding-top: 110px;
+    width: 100%;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    font-family: "Montserrat";
+    font-weight: bolder;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+    padding: 5px 10px;
+    font-size: 14px;
+    transition: text-decoration 1s ease;
+}
+
+nav a:hover {
+    text-decoration-color: rgb(255, 255, 255);
+}
+
+    /* Sections */
+    section {
+        max-width: 100px;
+        margin: 20px auto;
+        background: transparent;
+        border-radius: 40px;
+        padding: 10px;
+      
+    }
+
+    /* Info Section */
+ 
+    footer {
+        margin: 20px auto;
+        background: transparent;
+        border-radius: 40px;   
+        text-align: center;
+        padding: 10px 0;
+        font-size: 15px;
+        width: 70%;
+        font-family: "Montserrat";
+    }
+
+    .info-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .info-item {
+        flex: 1;
+        text-align: center;
+        color: #fff;
+        padding: 0px;
+        max-width: 90%;
+    }
+
+    .social-icon {
+        height: 90px;
+        width: 90px;
+        margin-top: -10px;
+    }
+
+    .line {
+        margin: 10px auto;
+        background: transparent;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .bot-about {
+        font-size: 19px;
+        line-height: 1.5;
+        margin: 5px 0;
+    }
+
+    .title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .subtext {
+        font-size: 1rem;
+        color: #e3d0b7;
+        margin-bottom: 20px;
+    }
+    
+    /* Drinks Section */
+    #drinks  {
+        text-align: center;
+        padding: 60px 90px;
+        max-width: 1200px;
+        justify-content: space-between;
+    }
+
+    .section-title2 {
+        font-size: 50px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+        color: #ddd;
+        margin-bottom: 40px;
+    }
+
+    .drinks-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .drink-item-hot {
+        background-image: linear-gradient(to top, #be7656, #be7656);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        width: 400px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }   
+    .drink-item-frappes {
+        background-image: linear-gradient(to top, #98572f, #c18736);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        width: 400px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }   
+    .drink-item-cold {
+        background-image: linear-gradient(to top, #3b5f68, #c5c750);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        width: 400px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }   
+    .drink-item-italian {
+        background-image: linear-gradient(to top, #f7b401, #fef4e4);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        width: 400px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }   
+
+    .drink-desc {
+        font-size: 50px;
+    }
+
+    .drink-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .drink-image-container {
+        overflow: show;
+        border-radius: 8px;
+    }
+
+    .drink-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .drink-image-container:hover .drink-image {
+        transform: scale(1.1); 
+    }
+
+    .drinks-container h3 {
+        color: #fff;
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    .drinks-container p {
+        color: #ddd;
+        font-size: 13px;
+        margin: 10px 0;
+    }
+
+    
+
+    #about {
+        background-image: url(FRRRONTJPG.JPG);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        backdrop-filter: blur(5px);
+        max-width: 65%;
+        margin: 20px auto;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(FRRRONTJPG.JPG);
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(5px);
+        z-index: -1;
+    }
+
+    .about {
+        text-align: center;
+        font-size: 50px;
+        margin-top: -20px;
+    }
+    
+    .intro-text {
+        margin: 20px 0;
+        text-align: center;
+        color: rgb(213, 195, 169);
+        font-size: 18px;
+    }
+
+    .about-content {
+        line-height: 1.1;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .aboutsecleft, .aboutsecright {
+        background: transparent;
+        color: #fff;
+        font-size: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        flex: 1;
+        min-height: 0;
+        min-width: 0;
+        margin-top: -30px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .section-text {
+        margin-top: -5px;
+        font-size: 50px;
+        max-width: 70%;
+    }
+
+    .section-text-right {
+        font-size: 99%;
+        max-width: 90%;
+        color: #ddd;
+        
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+    }
+
+    .aboutsecright {
+        position: relative;
+    }
+
+    .readmore {
+        font-family: "Montserrat", sans-serif;
+        margin-top: 2%;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 140px;
+        padding: 20px;
+        font-family: "Playfair Display";
+        color: white;
+        position: relative;
+        max-width: 1000px;
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+
+    }
+
+    .hero-content h2 {
+        font-size: 700%;
+        line-height: 100px;
+        max-width: 100%;
+        margin-top: -40px;
+        margin-bottom: -10px;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        font-family: "Montserrat";
+        color: white;
+    }
+    .drink-item a {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        text-decoration: none; /* No underlines on the link */
+        z-index: 10; /* Places the link above everything else in the div */
+        background-color: #FFF; /* Fix to make div clickable in IE */
+        opacity: 0; /* Fix to make div clickable in IE */
+        filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+    }
+    .ate {
+        opacity: 40%;
+        z-index: 0;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #pastriescrof {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "Playfair Display";
+        color: white;
+        position: relative;
+        max-width: 65%
+    }
+    #pastriescrof a {
+        text-decoration: underline;
+    }
+
+#textleft {
+    background-color: black;
+
+}
+.pastries-content h2 {
+    font-size: 70px;
+    margin: 0;
+}
+.pastries-content p {
+    max-width: 500px;
+}
+
+#pasta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Playfair Display";
+    color: white;
+    background-color: #b78858;
+    position: relative;
+    height: 450px;
+    max-width: 65%;
+}
+#textleft {
+    background-color: black;
+
+}
+
+.pasta-content h2 {
+    font-size: 70px;
+    margin: 0;
+    line-height: 50px;
+}
+.pasta-content p {
+    max-width: 500px;
+}
+
+section p {
+    font-family: 'Montserrat';
+}
+.italy p{
+    color: black;
+}
+.italy h3{
+    color: black;
+}
+#ordernow:hover {
+    opacity: 0.5;
+    transition: all 600ms;
+}

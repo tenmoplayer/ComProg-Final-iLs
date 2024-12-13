@@ -1,0 +1,321 @@
+.modal {
+    background-color: rgba(0, 0, 0, 0.295);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    overflow: hidden;
+    display: none;
+}
+#totalmodal {
+    display: none;
+    z-index: 99999;
+}
+.confirmation {
+    border: solid 1px white;
+    width: 500px;
+    height: 20vh;
+    min-width: 20vw;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    text-align: center;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    display: none;
+}
+.confirmation p {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+.confirmation .confirmationbtns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 60px;
+}
+.confirmation .confirmationbtns button {
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #b2a896;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-family: 'Montserrat';
+    color: #663c20;
+    cursor: pointer;
+}
+.confirmation .confirmationbtns button:hover {
+    opacity: 0.8;
+}
+.confirmation .confirmationbtns :nth-child(2) {
+    background-color: #e55d29;
+    color: white;
+}
+#checkoutmodal {
+    display: none;
+}
+.content {
+    display: grid;
+    grid-template-columns: 1fr 20vw;
+    column-gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    background-image: linear-gradient(to right, #7f4525, #a77c4e);
+    height: 70vh;
+    border-radius: 20px;
+    border: solid 2px rgb(126, 125, 125);
+    padding: 20px;
+    overflow: hidden;
+}
+.target {
+    background-color: #7f4525;
+    width: 20vw;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.content .target .listCard {
+    max-height: 50vh;
+}
+.content .target .listCard::-webkit-scrollbar {
+    width: 10px;
+}
+.content .target .listCard::-webkit-scrollbar-thumb {
+    background: rgb(182, 182, 182); 
+    border-radius: 10px;
+}
+.content .target .listCard::-webkit-scrollbar-track {
+    display: none;
+}
+.content .target .listCard li :nth-child(4) :nth-child(1){
+    display: none;
+}
+.content .target .listCard li :nth-child(4) :nth-child(3){
+    display: none;
+}
+.content .target .listCard li:nth-child(even){
+    background-color: #7f4525;
+}
+
+.parent {
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    color: white;
+    font-family: 'Montserrat';
+    overflow: hidden;
+}
+
+.div1 { 
+    grid-area: 1 / 1 / 2 / 2; 
+    position: relative;
+}
+.div4{
+    grid-area: 1 / 2 / 2/ 3;
+    background-image: url("P1016466.JPG");
+    background-size: cover;
+    border-radius: 20px;
+}
+.div1 h1 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+}
+.div1 h2 {
+    font-size: 40px;
+    padding: 10px;
+    margin-bottom: 0px
+}
+.div1 input {
+    height: auto;
+}
+.div2 { grid-area: 2 / 1 / 3 / 2; }
+.div2 {
+    background-color: #7f4525;
+    border-radius: 20px;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+.div2 h2 {
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.div3 { grid-area: 2 / 2 / 3 / 3; }
+.div3 {
+    background-color: #7f4525;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+.div3 h2 {
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+}
+.div3 p {
+    text-align: center;
+    margin: 10px;
+}
+.div3 input {
+    height: auto;
+    text-align: center;
+    width: 100%;
+    text-decoration: underline;
+    color: white;
+}
+
+.rightside {
+    display: grid;
+    grid-template-rows: 50vh 1fr;
+    row-gap: 20px;
+    font-family: 'Montserrat';
+}
+.placeorder {
+    overflow: hidden;
+    background-color: #7f4525;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.placeorder h2 {
+    font-size: 20px;
+}
+.placeorderbtns {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    bottom: 0;
+    width: 100%;
+    right: 0;
+}
+.placeorderbtns :nth-child(1) {
+    background-color: #b2a896;
+}
+.placeorderbtns button {
+    background-color: #e55d29;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+.placeorderbtns button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.placeorder p {
+    font-weight: light;
+    margin: 0;
+}
+.address-container {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.address-label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+.address-input {
+    width: 100%;
+    height: 120px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    resize: vertical;
+}
+
+.address-input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.address-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+.oncounter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    background-color: #7f4525;
+    height: 60vh;
+    border-radius: 20px;
+    border: solid 2px rgb(126, 125, 125);
+    padding: 20px;
+    z-index: 9999999;
+    display: none;
+}
+.oncounter h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+.oncounter h1 {
+    font-size: 150px;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Montserrat';
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.oncounter p {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Montserrat';
+}
+.oncounter button {
+    background-color: #e55d29;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    width: 50%;
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+.oncounter button:hover {
+    opacity: 0.8;
+}
+.deliverymodal {
+    width: 40vw;
+    height: 20vh;
+    background-color: red;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 99999999;
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "CHOCO",
+        "price": 2,
+        "image": "image/CAFE AMERICANO.png"
+    },
+    {
+        "id": 2,
+        "name": "dad",
+        "price": 2,
+        "image": "image/CAFE AMERICANO.png"
+    }
+]

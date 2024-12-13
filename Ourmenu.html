@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS_Folder/Ourmenu.css">
+    <link rel="stylesheet" href="CSS_Folder/modals.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="CSS_Folder/header_footer.css">
+    <link rel="stylesheet" href="CSS_Folder/card.css">
+    <title>Menu</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="deliverymodal">
+
+    </div>
+    
+    <div class="modal" id="checkoutmodal">
+        <div class="content">
+            <div class="confirmation">
+                <p>Confirm order?</p>
+                <div class="confirmationbtns">
+                    <button id="yesnow" onclick="generateSixDigitNumber()"> Yes </button>
+                    <button id="backnow"> Back</button>
+                </div>
+            </div>
+            <div class="oncounter">
+                <h2>Redeem code at counter</h2>
+                <h1><span id="displayNumber">None</span></h1>
+                <p> Thank you for purchasing!</p>
+                <button id="backcounter"> Back </button>
+            </div>
+            <div class="parent">
+                <div class="div1">
+                    <h1>Checkout</h1>
+                    <h2>Pickup Method</h2>
+                    <div class="pickupmethod">
+                        <input type="radio" id="pickupmethod1" name="pickupmethod" value="delivery">
+                        <label for="pickupmethod1"> Delivery </label><br>
+                        <input type="radio" id="pickupmethod2" name="pickupmethod" value="otc">
+                        <label for="pickupmethod2"> Pickup at Counter </label><br>
+                    </div>
+                
+                    <br>
+                    <h2>Payment Method</h2>
+                    <div class="paymentmethod">
+                        <input type="radio" id="paymentmethod1" name="paymentmethod" value="cod">
+                        <label for="paymentmethod1"> Cash on Delivery </label><br>
+                        <input type="radio" id="paymentmethod2" name="paymentmethod" value="30">
+                        <label for="paymentmethod2"> GCash </label><br>
+                    </div>
+                </div>
+                <div class="div4">
+
+                </div>
+                <div class="div2">
+                    <h2>Address</h2>
+                    <div class="address-container">
+                        <label for="address" class="address-label">Enter Your Address:</label>
+                        <textarea id="address" class="address-input" placeholder="House number, Street, Barangay, City, Province, ZIP code"></textarea>
+                    </div>
+                
+                </div>
+                <div class="div3">
+                    <h2>GCash Details</h2>
+                    <p>Merchant: Coffee Spot, Canumay East, Valenzuela</p>
+                    <p>Amount Due: <span class="sum"></span></p>
+                    <p>Input your Mobile number</p>
+                    <input 
+                        type="number" 
+                        id="phoneNumber" 
+                        class="input-field" 
+                        placeholder="Enter up to 11 digits" 
+                        max="99999999999"
+                        oninput="if(this.value.length > 11) this.value = this.value.slice(0, 11);">
+                </div>
+            </div>
+            <div class="rightside">
+                <div class="target">
+                    
+                </div>
+                <div class="placeorder">
+                    <h2>Payment Details</h2>
+                    <p>Product Total: <span class="total"></span></p>
+                    <p id="deliveryfee"> Delivery Fee: ₱30</p>
+                    <p> Total: <span id="sumofall"></span></p>
+                    <div class="placeorderbtns">
+                        <button id="cancel">Cancel</button>
+                        <button id="placeordernow">Place Order</button>
+                    </div>
+                </div>
+            </div>
+            <img src="" id="hey" style="height: 48%; z-index: -211; background-size: contain; pointer-events: none; border-radius: 20px; position: absolute; right: 30.7%;">
+        </div>
+        <div class="confirmorder">
+
+        </div>
+    </div>
+    <header>
+        <img src="PAGPAG (2).png" style="height: 400px; position: absolute; top: 0px; margin-top: -40px;">
+        <nav style="z-index: 100;">
+            <ul>
+                <li><a href="ILS.html">Home</a></li>
+                <li><a href="Ourmenu.html" target="_blank">Our Menu</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="ILS.html#about">About</a></li>
+                <li><a href="Ourmenu.html#about">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="shopping">
+            <img src="image/shopping.svg">
+            <span class="quantity">0</span>
+        </div>
+    </header>
+
+    <div id="successCard" class="success-card">
+        Your order has been added to the cart!
+    </div>
+    
+    <div class="card">
+        <h1>My Cart</h1>
+        <ul class="listCard" id="listCard">
+            
+        </ul>
+        <div class="checkOut">
+            <div class="closeShopping">Close</div>
+            
+            <div class="checkoutbtn" id="total" onclick="showmodal()">Check Out <span id="itemcount"> </span></div>
+        </div>
+    </div>
+    
+        <h2 style="text-align: center; margin: 0;">Our Menu</h2>
+
+    <div class="twocontainer" id="twocontainment">
+
+
+<div class="finalcontainer" id="drinkna">
+    <div class="category">
+        <button onclick="scrollToDestinationX('italianyan')"style="visibility: hidden;"> < </button>
+        <h2 style="font-size: 80px; margin-bottom: 0;"> Drinks</h2>
+        <button onclick="scrollToDestinationA('foodna')"style="visibility: hidden;"> > </button>
+    </div>
+    
+    <hr style="width: 10%; ">
+    <p class="section-subtitle">Hot coffee starts the day strong, cold coffee cools you down on hot days, frappes offer creamy<br>sweetness and frostiness, and Italian soda provides a fizzy, refreshing twist with fruity syrups and sparkling water.</p>
+
+    <section class="allcontainer" id="drinkslist">
+        <div class="drinkscontainer">
+
+            <section class="main" id="hotyan">
+                    <div class="category">
+                        <button onclick="scrollToDestinationX('italianyan')"> < </button>
+                        <h2 id="category">Hot Coffee</h2>
+                        <button onclick="scrollToDestinationX('coldyan')"> > </button>
+                    </div>
+                    <hr style="width: 10%; margin-top: 20px;">
+                    <p class="section-subtitle">Hot coffee kicks off your day with energy and focus, setting the tone for everything ahead.</p>
+                <section class="jscontainer" id="hotcoffee"> 
+                
+                </section>
+            </section>
+
+                
+            <section class="main" id="coldyan">
+                <div class="category">
+                    <button onclick="scrollToDestinationX('hotyan')"> < </button>
+                    <h2 id="category">Cold Coffee</h2>
+                    <button onclick="scrollToDestinationX('frappeyan')"> > </button>
+                </div>
+                    <hr style="width: 10%; margin-top: 20px;">
+                    <p class="section-subtitle">Cold coffee refreshes you when the temperature rises, providing a perfect pick-me-up for those sunny days.</p>
+                <section class="jscontainer" id="coldcoffee"> 
+                    
+                </section>
+            </section>
+
+            
+            <section class="main" id="frappeyan">
+                <div class="category">
+                    <button onclick="scrollToDestinationX('coldyan')"> < </button>
+                    <h2 id="category">Frappes</h2>
+                    <button onclick="scrollToDestinationX('italianyan')"> > </button>
+                </div>
+                    <hr style="width: 10%; margin-top: 20px;">
+                    <p class="section-subtitle">Frappes deliver a perfect blend of creamy sweetness and refreshing frostiness, making them the ultimate treat for any coffee lover.</p>
+                    
+                <section class="jscontainer" id="frappes"> 
+                    
+                </section>
+            </section>
+        
+
+            <section class="main" id="italianyan">
+                <div class="category">
+                    <button onclick="scrollToDestinationX('frappeyan')"> < </button>
+                    <h2 id="category">Italian Soda</h2>
+                    <button onclick="scrollToDestinationX('hotyan')"> > </button>
+                </div>
+                    <hr style="width: 10%; margin-top: 20px;">
+                    <p class="section-subtitle">Italian soda offers a fizzy, refreshing twist, combining fruity syrups with sparkling water for a lively beverage that's perfect any time of day.</p>
+                    
+                <section class="jscontainer" id="italian"> 
+                    
+                </section>
+            </section>
+        </div>
+    </section>
+</div>
+
+
+<div class="actual">
+ 
+<div class="finalcontainer" id="foodna">
+    <div class="category">
+        <button onclick="scrollToDestinationX('italianyan')" style="visibility: hidden;"> < </button>
+        <h2 style="font-size: 80px; margin-bottom: 0;"> Foods</h2>
+        <button onclick="scrollToDestinationX('coldyan')" style="visibility: hidden;"> > </button>
+    </div>
+    <hr style="width: 10%;">
+        <p class="section-subtitle">Enjoy our tasty pastries and unique croffles, along with hearty pasta dishes and delicious sandwiches. <br>For a filling meal, try our rice bowls that everyone will love!</p>
+    
+
+
+    <section class="allcontainer" id="foodlist">
+        <div class="foodcontainer">
+                <section class="main" id="pastryyan">
+                    <div class="category">
+                        <button onclick="scrollToDestinationM('ricemealsyan')"> < </button>
+                        <h2 id="category"> Pastries</h2>
+                        <button onclick="scrollToDestinationM('pastayan')"> > </button>
+                    </div>
+                    <hr style="width: 10%;">
+                    <p class="section-subtitle">Soft and moist, with a gentle sweetness in every bite. A delightful, satisfying treat to enjoy anytime.</p>
+
+                        <section class="jscontainer" id="pastries"> 
+
+                        </section>
+                </section>
+
+                <section class="main" id="pastayan">
+                    <div class="category">
+                        <button onclick="scrollToDestinationM('pastryyan')"> < </button>
+                        <h2 id="category"> Pasta</h2>
+                        <button onclick="scrollToDestinationM('sandwichyan')"> > </button>
+                    </div>
+
+
+                    <hr style="width: 10%;">
+                    <p class="section-subtitle">Twirl your fork and dig into pasta that make every bite unforgettable. A delicious adventure of cheesy bliss and savory sauces.</p>
+                    
+                    <section class="jscontainer" id="pasta"> 
+
+                    </section>
+                </section>
+                <section class="main" id="sandwichyan">
+                    <div class="category">
+                        <button onclick="scrollToDestinationM('pastayan')"> < </button>
+                        <h2 id="category"> Sandwich</h2>
+                        <button onclick="scrollToDestinationM('crofflesyan')"> > </button>
+                    </div>
+                    <hr style="width: 10%;">
+                    <p class="section-subtitle"> Full of flavor and ideal for any cravings. Dig into juicy chicken, fresh tuna, or a classic burger, all served with crunchy chips on the side.</p>
+                    
+                    <section class="jscontainer" id="sandwich"> 
+
+                    </section>
+                    
+                </section>
+
+                <section class="main" id="crofflesyan">
+                    <div class="category">
+                        <button onclick="scrollToDestinationM('sandwichyan')"> < </button>
+                        <h2 id="category"> Croffles</h2>
+                        <button onclick="scrollToDestinationM('pcrofflesyan')"> > </button>
+                    </div>
+
+                    <hr style="width: 10%;">
+                    <p class="section-subtitle">Enjoy our delicious croffles, a crispy waffle treat with a variety of flavors. Perfect for a snack or a tasty breakfast!</p>
+                    <section class="jscontainer" id="croffles"> 
+                    </section>
+                </section>
+
+                <section class="main" id="pcrofflesyan">
+                    <div class="category">
+                        <button onclick="scrollToDestinationM('crofflesyan')"> < </button>
+                        <h2 id="category"> Premium Croffles</h2>
+                        <button onclick="scrollToDestinationM('ricemealsyan')"> > </button>
+                    </div>
+                    <hr style="width: 10%;">
+                    <p class="section-subtitle">Enjoy our delicious croffles, a crispy waffle treat with a variety of flavors. Perfect for a snack or a tasty breakfast!</p>
+                    <section class="jscontainer" id="pcroffles"> 
+                    </section>
+                </section>
+
+                <section class="main" id="ricemealsyan">
+                    <div class="category">
+                        <button onclick="scrollToDestinationM('pcrofflesyan')"> < </button>
+                        <h2 id="category"> Rice Meals</h2>
+                        <button onclick="scrollToDestinationM('pastryyan')"> > </button>
+                    </div>
+                    <hr style="width: 10%;">
+                    <p class="section-subtitle">Tender and savory with rich flavors. A hearty, comforting dish perfect for a fulfilling meal.</p>
+                    <section class="jscontainer" id="ricemea"> 
+                        
+                </section>
+            </section>       
+    </div>
+
+</div>
+</section>
+</div>
+</div>
+
+    <footer id="footer">
+        <hr class="line">
+
+        <div class="info-section">
+            <!-- Facebook Icon and Link -->
+            <div class="info-item">
+                <br><br>
+                <a href="https://www.facebook.com/profile.php?id=100095401901859&mibextid=ZbWKwL" target="_blank">
+
+                    <img src="woa.png" alt="Facebook Icon" class="social-icon">
+                </a>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="info-item">
+                <p class="bot-about"><b>Location:</b></p>
+                <p class="bot-about">Uno Fuel Canumay East, Valenzuela, </p> 
+                <p class="bot-about">Philippines</p>
+            </div>
+
+            <div class="info-item">
+                <p class="bot-about"><b>Contact Us:</b></p>
+                <p class="bot-about">0915 409 2554</p>
+                <p class="bot-about">0966 672 0436</p>
+                <p class="bot-about"> coffeespotcanumayeastval@gmail.com</p>
+            </div>
+
+            <!-- Opening Hours -->
+            <div class="info-item">
+                <p class="bot-about"><b>Opening Hours:</b></p>
+                <p class="bot-about">Mon - Fri: <br> 8:00 AM - 8:00 PM</p>
+                <p class="bot-about">Sat - Sun: <br> 9:00 AM - 9:00 PM</p>
+            </div>
+        </div>
+
+        <hr class="line">
+    </footer>
+    <script src="JS_Folder/script.js"></script>
+    <script src="JS_Folder/modals.js"></script>
+</body>
+</html>

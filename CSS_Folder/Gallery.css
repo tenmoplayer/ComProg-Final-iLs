@@ -1,0 +1,177 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    line-height: 1.6;
+    background-image: linear-gradient(to right, #7f4525, #a77c4e);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: transparent;
+    padding: 5px 0;
+    position: relative;
+    padding-top: 110px;
+    width: 100%;
+    z-index: 10000;
+    display: flex;  
+    justify-content: center;
+}
+
+nav ul {
+    font-family: "Montserrat";
+    font-weight: bolder;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+color: #ddd;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+h2{
+    font-size: 600%;
+    font-weight: bold;
+    margin-top: -10px;
+    color: #fff;
+}
+
+#gallery-container {
+    position: relative;
+    max-width: 80%;
+    text-align: center;
+    padding: 60px 90px;
+    font-family: "Playfair";
+}
+
+#container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    max-width: 90%;
+    scrollbar-width: none;
+    justify-content: center;
+    flex-wrap: nowrap;
+}   
+
+section {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: transparent;
+    border-radius: 5px;
+}
+#container img{
+    position: relative;
+    align-items: baseline;
+    text-align: center;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    margin: 20px;
+}   
+#container img:hover{
+    transform: scale(1.2);
+    z-index: 20;
+}   
+#secondcontainer {
+    margin-top: 7%;
+    max-width: 90%;
+}
+#secondcontainer img{
+    position: relative;
+    align-items: baseline;
+    text-align: center;
+    height: 250px;
+    object-fit: cover;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    margin: 10px;
+    max-width: 90%;
+}   
+#secondcontainer img:hover{
+    transform: scale(1.2);
+    z-index: 20;
+}   
+footer {
+    margin: 20px auto;
+    background: transparent;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);        
+    text-align: center;
+    padding: 10px 0;
+    font-size: 15px;
+    width: 70%;
+    font-family: "Montserrat";
+}
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-item {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    padding: 0px;
+    max-width: 90%;
+}
+.social-icon {
+    height: 90px;
+    width: 90px;
+    margin-top: -10px;
+}
+
+.line {
+    margin: 10px auto;
+    background: transparent;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.bot-about {
+    font-size: 19px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtext {
+    font-size: 1rem;
+    color: #e3d0b7;
+    margin-bottom: 20px;
+}

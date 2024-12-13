@@ -1,0 +1,146 @@
+.card{
+    position: fixed;
+    top:0;
+    left: 100%;
+    width: 450px;
+    background-color: #7f4525;
+    height: 100vh;
+    transition: 0.5s;
+    border-radius: 20px;
+    z-index: 9999;
+}
+
+.active .card{
+    left: calc(100% - 450px);
+}
+.active .container{
+   transform: translateX(-200px);
+}
+.card h1{
+    color: white;
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 20px;
+    align-items: center;
+    background-color: #7f4525;
+    font-weight: 300;
+}
+.card .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-sizing: border-box;
+}
+.card .checkOut div{
+    background-color: #b2a896;
+    color: #663c20;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+}
+.card .checkOut div:nth-child(2){
+    background-color: #e55d29;
+    color: white;
+}
+.listCard {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    height: 84vh;
+    box-sizing: border-box;
+}
+.listCard::-webkit-scrollbar {
+    width: 0;
+}
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+    font-family: 'Oswald';
+    margin: 0;
+    padding: 0;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCard li img{
+    width: 90%;
+    filter: drop-shadow(0 0 0.25rem black);
+}
+.listCard li button{
+    background-color: #fff5;
+    border: none;
+    cursor: pointer;
+}
+.listCard .count{
+    margin: 0 10px;
+}
+.listCard li:nth-child(odd){
+    background-color: #915b3e;
+}
+i {
+    transition: transform 1 ease;
+}
+i:hover{
+    transform: scale(1.5);
+}
+.success-card {
+    background-color: #663c20;
+    color: white;
+    font-family: 'Montserrat';
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 999;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.success-card.visible {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it visible */
+}
+.shopping {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.shopping img{
+    width: 40px;
+    color: white;
+    margin: 20px;
+}
+.shopping span{
+    font-family: 'Montserrat';
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: fixed;
+    margin-top: 20px;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+}
+.totalposition {
+    font-family: 'Montserrat';
+    position: absolute;
+    bottom: 100px;
+}
